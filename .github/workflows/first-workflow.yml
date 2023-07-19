@@ -1,0 +1,16 @@
+# name of workflow
+name: First Workflow
+# when the workflow should be executed. the workflow_dispatch will cause the user to manually run the workflow
+on: workflow_dispatch
+# definining the jobs 
+jobs:
+# naming the first job
+  first-job:
+  # details about the first job. runs-on defines the runner or the environment
+    runs-on: ubuntu-latest
+    # defininf the steps to run
+    steps:
+      - name: Print greeting
+        run: echo "Hello World!"
+      - name: Print goodbye
+        run: echo "Done - bye!"
